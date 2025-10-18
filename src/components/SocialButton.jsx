@@ -3,7 +3,7 @@ import './SocialButton.css'
 function SocialButton() {
   const handleClick = () => {
     // Replace with your actual X account URL when ready
-    window.open('https://x.com/youraccount', '_blank', 'noopener,noreferrer')
+    window.open('https://x.com/goldsystemsol', '_blank', 'noopener,noreferrer')
   }
 
   return (
