@@ -1,0 +1,198 @@
+.activity-feed {
+  animation: fadeIn 1s ease-out;
+}
+
+.pending-box {
+  margin-bottom: 24px;
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.pending-badge {
+  margin-left: auto;
+  padding: 4px 12px;
+  background: rgba(255, 215, 0, 0.2);
+  border: 1px solid var(--gold-primary);
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--gold-primary);
+}
+
+.completed-box {
+  margin-bottom: 32px;
+  animation: slideInFromLeft 0.9s ease-out;
+}
+
+.completed-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+.feed-box {
+  grid-column: 1 / -1;
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.feed-content {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.feed-info {
+  font-size: 13px;
+  color: var(--gold-primary);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.feed-status {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.feed-note {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.activity-box {
+  animation: slideInFromRight 0.8s ease-out;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activity-item {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  background: rgba(255, 215, 0, 0.05);
+  transform: translateX(4px);
+}
+
+.activity-item.activity-active {
+  border-left-color: var(--green);
+}
+
+.activity-item.activity-completed {
+  border-left-color: var(--gold-primary);
+}
+
+.activity-item.activity-pending {
+  border-left-color: var(--gold-light);
+}
+
+.activity-title {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.activity-action {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.activity-status {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.activity-status.status-active {
+  color: var(--green);
+}
+
+.activity-status.status-completed {
+  color: var(--gold-primary);
+}
+
+.activity-status.status-pending {
+  color: var(--gold-light);
+}
+
+.operations-box {
+  animation: slideInFromLeft 0.9s ease-out;
+}
+
+.operations-content {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.operation-header {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.operation-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 215, 0, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.operation-icon {
+  font-size: 18px;
+}
+
+.operation-id {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-box {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .feed-content {
+    padding: 16px;
+  }
+
+  .activity-item {
+    padding: 12px;
+  }
+
+  .activity-title {
+    font-size: 13px;
+  }
+
+  .activity-action {
+    font-size: 11px;
+  }
+}

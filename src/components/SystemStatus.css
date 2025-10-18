@@ -1,0 +1,286 @@
+.system-status {
+  animation: fadeIn 1s ease-out;
+}
+
+.main-terminal {
+  margin-bottom: 32px;
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.processing-table {
+  margin: 32px 0;
+  font-size: 13px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.table-header {
+  color: var(--gold-primary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.mono-text {
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.optimizing-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.optimizing-title {
+  font-size: 32px;
+  color: var(--gold-primary);
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.optimizing-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.status-card {
+  animation: fadeIn 1s ease-out;
+  transition: all 0.3s ease;
+}
+
+.status-card:hover {
+  transform: translateY(-4px);
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.status-icon {
+  font-size: 20px;
+  color: var(--gold-primary);
+}
+
+.status-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.status-value.positive {
+  color: var(--green);
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+.status-value.negative {
+  color: var(--gold-primary);
+}
+
+.status-percent {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.status-percent.positive {
+  color: var(--green);
+}
+
+.wallet-section {
+  margin-bottom: 32px;
+  animation: slideInFromRight 0.8s ease-out;
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.wallet-label {
+  font-size: 12px;
+  color: var(--gold-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.wallet-address {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.system-log {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.log-content {
+  font-size: 13px;
+}
+
+.log-info {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.log-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.log-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.log-entry {
+  display: flex;
+  gap: 12px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  padding: 8px;
+  border-left: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.log-entry:hover {
+  background: rgba(255, 215, 0, 0.05);
+  border-left-color: var(--gold-primary);
+}
+
+.log-time {
+  color: var(--text-secondary);
+  min-width: 60px;
+}
+
+.log-message {
+  color: var(--text-primary);
+}
+
+.log-success {
+  border-left-color: var(--green);
+}
+
+.log-info {
+  border-left-color: var(--gold-light);
+}
+
+.log-warning {
+  border-left-color: var(--gold-dark);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.stat-item .stat-label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat-item .stat-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.gold-text {
+  color: var(--gold-primary);
+}
+
+@media (max-width: 1024px) {
+  .system-log {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wallet-actions {
+    flex-direction: column;
+  }
+
+  .wallet-actions .btn {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .optimizing-title {
+    font-size: 24px;
+  }
+}

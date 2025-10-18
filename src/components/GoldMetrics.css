@@ -1,0 +1,69 @@
+.gold-metrics {
+  animation: fadeIn 1s ease-out;
+}
+
+.metrics-scroll {
+  display: flex;
+  gap: 32px;
+  padding: 24px 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 4px;
+  min-width: 400px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.metric-id {
+  color: var(--gold-primary);
+  font-weight: bold;
+  min-width: 30px;
+}
+
+.metric-name {
+  color: var(--text-primary);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.metric-desc {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.metric-value {
+  color: var(--gold-primary);
+  font-family: 'Share Tech Mono', monospace;
+  margin-left: auto;
+}
+
+.metric-change {
+  color: var(--gold-dark);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .metrics-scroll {
+    flex-direction: column;
+  }
+
+  .metric-item {
+    min-width: 100%;
+    flex-wrap: wrap;
+  }
+}

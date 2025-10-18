@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+:root {
+  --gold-primary: #FFD700;
+  --gold-light: #FFF59D;
+  --gold-dark: #FFA000;
+  --green: #00ff00;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --border-color: rgba(255, 215, 0, 0.3);
+  --bg-dark: #0a0a0a;
+  --bg-card: rgba(20, 20, 20, 0.8);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}
+
+/* Selection */
+::selection {
+  background: var(--gold-primary);
+  color: #000;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px var(--gold-primary),
+                 0 0 20px var(--gold-primary),
+                 0 0 30px var(--gold-primary);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--gold-primary),
+                 0 0 30px var(--gold-primary),
+                 0 0 40px var(--gold-primary),
+                 0 0 50px var(--gold-dark);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
